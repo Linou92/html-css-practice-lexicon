@@ -166,28 +166,6 @@ button:hover {
     color: #333;
 }
 
-/* Grid gallery */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 80%;
-    margin: 40px auto;
-}
-
-/* Grid cards */
-.card {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    border: 2px solid #ddd;
-}
-
-/* Grid spanning */
-.feature {
-    grid-column: span 2;
-}
-
 /* Footer */
 footer {
     background-color: #1a73e8;
