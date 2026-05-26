@@ -8,16 +8,16 @@
 /* Body styling */
 body {
     font-family: sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color:var(--background-color);
+    color: var(--text-color);
     text-align: center;
     line-height: 1.6;
 }
 
 /* ID selector */
 #main-header {
-    background-color: #1a73e8;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--dark-text);
     padding: 20px;
 }
 
@@ -30,7 +30,7 @@ h1 {
 h2 {
     margin-top: 30px;
     margin-bottom: 15px;
-    color: #1a73e8;
+    color: var(--primary-color);
 }
 
 p {
@@ -66,7 +66,7 @@ p {
 
 /* Class selector */
 .highlight {
-    color: red;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -122,8 +122,8 @@ button {
 
 /* Button hover */
 button:hover {
-    background-color: #1a73e8;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--dark-text);
     transform: scale(1.05);
     transition: 0.3s;
 }
@@ -165,7 +165,7 @@ button:hover {
     padding: 10px;
     text-decoration: none;
     border-radius: 5px;
-    color: #333;
+    color: var(--text-color);
 }
 
 /* Grid Layout */
@@ -190,10 +190,78 @@ button:hover {
     grid-column: span 2;
 }
 
+/* Smooth Hover Transitions */
+a,
+button,
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #e8f0fe;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive Grid */
+.gallery {
+    display: grid;
+    /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+:root {
+    --primary-color: #1a73e8;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --dark-bg: #222;
+    --dark-text: #fff;
+}
+
+/* Dark Mode */
+.dark-theme {
+    background-color: #222;
+    color: white;
+}
+
+/* Dark cards/forms/tables */
+.dark-theme .card,
+.dark-theme form,
+.dark-theme table,
+.dark-theme .center-box,
+.dark-theme .sidebar a {
+    background-color: #333;
+    color: white;
+}
+
+/* Header/Footer */
+.dark-theme #main-header,
+.dark-theme footer {
+    background-color: black;
+}
+
+/* Links */
+.dark-theme a {
+    color: #4da3ff;
+}
+
+/* Sidebar links hover */
+.dark-theme .sidebar a:hover {
+    background-color: #444;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Footer */
 footer {
-    background-color: #1a73e8;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--dark-text);
     padding: 20px;
     margin-top: 40px;
 }
