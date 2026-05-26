@@ -147,6 +147,8 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 300px;
+    background-color: #ddd;
 }
 
 /* Sidebar layout */
@@ -164,6 +166,28 @@ button:hover {
     text-decoration: none;
     border-radius: 5px;
     color: #333;
+}
+
+/* Grid Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* Grid Items */
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+/* Grid Spanning */
+.feature {
+    grid-column: span 2;
 }
 
 /* Footer */
